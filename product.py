@@ -438,7 +438,7 @@ class Product(osv.Model):
                 context=context
             ).id
         else:
-            category_id, = category_obj.search(cursor, user, [
+            category_id,sub_category_id = category_obj.search(cursor, user, [
                 ('name', '=', 'Unclassified Magento Products')
             ], context=context)
 
